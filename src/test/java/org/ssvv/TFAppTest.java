@@ -67,7 +67,7 @@ public class TFAppTest
     public void tc5_addStudent()
     {
         int result = service.saveStudent("6", "ana", "933");
-        assertEquals( 0, result);
+        assertEquals( 1, result);
         service.deleteStudent("6");
     }
 

@@ -193,4 +193,20 @@ public class TFAppTest
         assertEquals( 1, result);
         service.deleteStudent("17");
     }
+
+    @Test
+    public void tc1_addTema()
+    {
+        int result = service.saveTema("11", "test", 1, 2);
+        assertEquals( 0, result);
+        service.deleteTema("11");
+    }
+
+    @Test
+    public void tc2_addTema()
+    {
+        int result = service.saveTema("11", "test", 2, 1);
+        assertEquals( 1, result);
+        service.deleteTema("11");
+    }
 }

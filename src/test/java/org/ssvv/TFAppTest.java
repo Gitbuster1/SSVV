@@ -195,7 +195,7 @@ public class TFAppTest
     }
 
     @Test
-    public void tc1_addTema()
+    public void tc1_addAssignment()
     {
         int result = service.saveTema("11", "test", 1, 2);
         assertEquals( 0, result);
@@ -203,7 +203,7 @@ public class TFAppTest
     }
 
     @Test
-    public void tc2_addTema()
+    public void tc2_addAssignment()
     {
         int result = service.saveTema("11", "test", 2, 1);
         assertEquals( 1, result);

@@ -199,7 +199,6 @@ public class TFAppTest
     {
         int result = service.saveTema("11", "test", 1, 2);
         assertEquals( 0, result);
-        service.deleteTema("11");
     }
 
     @Test
@@ -209,4 +208,34 @@ public class TFAppTest
         assertEquals( 1, result);
         service.deleteTema("11");
     }
+
+    @Test
+    public void tc3_addAssignment()
+    {
+        int result = service.saveTema("", "test", 2, 1);
+        assertEquals( 0, result);
+    }
+
+    @Test
+    public void tc4_addAssignment()
+    {
+        int result = service.saveTema("11", "", 2, 1);
+        assertEquals( 0, result);
+    }
+
+    @Test
+    public void tc5_addAssignment()
+    {
+        int result = service.saveTema("11", "test", 2, 0);
+        assertEquals( 0, result);
+    }
+
+    @Test
+    public void tc6_addAssignment()
+    {
+        int result = service.saveTema("11", "test", 0, -3);
+        assertEquals( 0, result);
+    }
+
+
 }

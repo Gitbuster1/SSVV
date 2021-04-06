@@ -41,6 +41,12 @@ public class Service {
     }
 
     public int saveTema(String id, String descriere, int deadline, int startline) {
+        if (deadline < startline || deadline <= 0 || startline <= 0) {
+            return 0;
+        }
+        if (id.length() == 0 || descriere.length() == 0) {
+            return 0;
+        }
         Tema tema = new Tema(id, descriere, deadline, startline);
         Tema result = temaXmlRepo.save(tema);
 

@@ -58,6 +58,6 @@ public class TFAppTest2 {
         int grade = service.saveNota("4", "11", 2, 1, "feedback");
         assertEquals( 1, grade);
         service.deleteTema("11");
-        service.deleteStudent("3");
+        service.deleteStudent("4");
     }
 }

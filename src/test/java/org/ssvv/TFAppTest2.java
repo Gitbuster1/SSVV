@@ -28,21 +28,21 @@ public class TFAppTest2 {
     Service service = new Service(fileRepository1, fileRepository2, fileRepository3);
 
     @Test
-    public void tc1_addStudent()
+    public void tc1_addBBStudent()
     {
         int result = service.saveStudent("3", "ana", "933");
         assertEquals( 1, result);
     }
 
     @Test
-    public void tc2_addAssignment()
+    public void tc2_addBBAssignment()
     {
         int result = service.saveTema("11", "test", 2, 1);
         assertEquals( 1, result);
     }
 
     @Test
-    public void tc3_addGrade()
+    public void tc3_addBBGrade()
     {
         int result = service.saveNota("3", "11", 2, 1, "feedback");
         assertEquals( 1, result);

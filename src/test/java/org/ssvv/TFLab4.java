@@ -30,32 +30,33 @@ public class TFLab4 {
     @Test
     public void tc1_addIIStudent()
     {
-        int result = service.saveStudent("3", "ana", "933");
+        int result = service.saveStudent("33", "ana", "933");
         assertEquals( 1, result);
-        service.deleteStudent("3");
+        service.deleteStudent("33");
     }
 
     @Test
     public void tc2_addIIStudentAssignment()
     {
-        int result = service.saveStudent("3", "ana", "933");
+        int result = service.saveStudent("34", "ana", "933");
         assertEquals( 1, result);
-        result = service.saveTema("11", "test", 2, 1);
+        result = service.saveTema("112", "test", 2, 1);
         assertEquals( 1, result);
-        service.deleteTema("11");
-        service.deleteStudent("3");
+        service.deleteTema("112");
+        service.deleteStudent("34");
     }
 
     @Test
     public void tc3_addIIAll()
     {
-        int result = service.saveStudent("4", "ana", "933");
+        int result = service.saveStudent("40", "ana", "933");
         assertEquals( 1, result);
-        result = service.saveTema("11", "test", 2, 1);
+        result = service.saveTema("111", "test", 2, 1);
         assertEquals( 1, result);
-        int grade = service.saveNota("4", "11", 2, 1, "feedback");
+        int grade = service.saveNota("40", "111", 2, 1, "feedback");
         assertEquals( 1, grade);
-        service.deleteTema("11");
-        service.deleteStudent("4");
+        service.deleteStudent("40");
+        service.deleteTema("111");
+
     }
 }
